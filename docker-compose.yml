@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  sphinx:
+    build: ./
+    ports:
+        - 8080:80
+    volumes:
+        - ./docker-machine-settings/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+        - ./app:/var/www/html
+        - ./docker-machine-settings/etc/php/5.6/fpm/pool.d/www.conf:/etc/php/5.6/fpm/pool.d/www.conf
+        - ./docker-machine-settings/etc/sphinxsearch/sphinx.conf:/etc/sphinxsearch/sphinx.conf
+    tty: true
