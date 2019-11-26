@@ -1,6 +1,10 @@
 <?php
 
 
+/**
+ * Class Sphinx
+ * simple class as example how to connect to sphinx
+ */
 class Sphinx
 {
     private static $_instance;
