@@ -45,7 +45,7 @@ class Sphinx
     public function getParagraphsIds($query)
     {
         try{
-            $sql = "SELECT id FROM content WHERE match( :queyr ) limit 0,200";
+            $sql = "SELECT id FROM content WHERE match( :query ) limit 0,200";
 
             $stmt = $this->pdo->prepare($sql);
 
